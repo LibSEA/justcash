@@ -13,3 +13,9 @@ node_modules
 .android
 
 platforms/electron/build/
+
+elm-stuff
+
+www/js/elm.js
+
+

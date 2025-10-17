@@ -6,8 +6,6 @@ vars:
   GREETING: Hello, World!
 
 tasks:
-  build-android-mixnet:
-
   default:
     cmds:
       - echo "{{.GREETING}}"

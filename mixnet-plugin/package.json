@@ -1,0 +1,21 @@
+{
+  "name": "cordova-plugin-mixnet",
+  "version": "1.0.0",
+  "description": "Cordova Mixnet Plugin",
+  "cordova": {
+    "id": "cordova-plugin-mixnet",
+    "platforms": [
+      "android"
+    ]
+  },
+  "repository": "github:LibSEA/justcash",
+  "bugs": "https://github.com/LibSEA/justcash/issues",
+  "keywords": [
+    "cordova",
+    "mixnet",
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "author": "Liberatory Software Engineering Association",
+  "license": "AGPL"
+}

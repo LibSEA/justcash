@@ -6,6 +6,14 @@ vars:
   GREETING: Hello, World!
 
 tasks:
+  plugin-update:
+    cmds:
+      - cordova plugin rm cordova-plugin-mixnet
+      - cordova plugin add ./mixnet-plugin
+    sources:
+      - mixnet-plugin/www/mixnet.js
+      - mixnet-plugin/src/android/*.java
+
   default:
     cmds:
       - echo "{{.GREETING}}"

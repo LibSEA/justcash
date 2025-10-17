@@ -1,10 +1,12 @@
 var exec = require('cordova/exec')
 
-module.exports = { 
-    doIt: function(callback) {
-        exec(callback, function(err) {
-            callback('error');
-        }, "Mixnet", "doIt", []);
+class Mixnet {
+    doIt() {
+        return new Promise(function (resolve, reject) {
+            exec(resolve, reject, "Mixnet", "doIt", []);
+        });
     }
-};
+}
+
+module.exports = new Mixnet();
 

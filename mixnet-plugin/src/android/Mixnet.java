@@ -36,7 +36,7 @@ public class Mixnet extends CordovaPlugin {
 
         public boolean execute(String action, JSONArray args,
                         CallbackContext callbackContext) throws JSONException {
-                callbackContext.success("42");
+                callbackContext.success((int)mixnet.Mixnet.doIt());
                 return true;
         }
 }

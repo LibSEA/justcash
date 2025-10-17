@@ -1,5 +1,5 @@
 package mixnet
 
 func DoIt() int {
-    return 42
+    return 31337
 }

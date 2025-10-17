@@ -12,7 +12,6 @@ devenv.local.yaml
 node_modules
 .android
 
-platforms/electron/build/
 
 elm-stuff
 
@@ -22,3 +21,6 @@ plugins
 platforms
 
 .task
+
+mixnet-plugin/src/android/mixnet-sources.jar
+mixnet-plugin/src/android/mixnet.aar

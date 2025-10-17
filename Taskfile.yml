@@ -14,8 +14,8 @@ tasks:
 
   plugin-update:
     cmds:
-      - cordova plugin rm cordova-plugin-mixnet
-      - cordova plugin add ./mixnet-plugin
+      - cordova platform rm android
+      - cordova platform add android
     sources:
       - mixnet-plugin/www/mixnet.js
       - mixnet-plugin/src/android/*.java

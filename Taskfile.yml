@@ -14,7 +14,26 @@ tasks:
       - mixnet-plugin/www/mixnet.js
       - mixnet-plugin/src/android/*.java
 
-  default:
+  elm-build:
     cmds:
-      - echo "{{.GREETING}}"
-    silent: true
+      - elm make elm/Main.elm --output=www/js/elm.js
+    sources:
+      - elm/*.elm
+
+  android-run:
+    deps:
+      - plugin-update
+      - elm-build
+    cmds:
+      - cordova run android
+
+  android-build:
+    deps:
+      - plugin-update
+      - elm-build
+    cmds:
+      - cordova build android
+    sources:
+      - platforms/android/platform_www/**/*
+      - platforms/android/app/**/*.java
+

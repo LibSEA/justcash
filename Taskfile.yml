@@ -6,6 +6,12 @@ vars:
   GREETING: Hello, World!
 
 tasks:
+  mixnet-build:
+    cmds:
+      - gomobile bind -androidapi=24 -o mixnet-plugin/src/android/mixnet.aar github.com/LibSEA/justcash/mixnet
+    sources:
+      - mixnet/*.go
+
   plugin-update:
     cmds:
       - cordova plugin rm cordova-plugin-mixnet

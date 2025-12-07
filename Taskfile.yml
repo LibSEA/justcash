@@ -6,24 +6,6 @@ vars:
   GREETING: Hello, World!
 
 tasks:
-  mixnet-build:
-    cmds:
-      - gomobile bind -androidapi=24 -o mixnet-plugin/src/android/mixnet.aar github.com/LibSEA/justcash/mixnet
-    sources:
-      - mixnet/*.go
-
-  plugin-update:
-    cmds:
-      - cordova platform rm android
-      - cordova plugin rm cordova-plugin-mixnet
-      - cordova platform add android
-      - cordova plugin add ./mixnet-plugin/ --link
-    sources:
-      - mixnet-plugin/www/mixnet.js
-      - mixnet-plugin/src/android/*
-    deps:
-      - mixnet-build
-
   elm-build:
     cmds:
       - elm make elm/Main.elm --output=www/js/elm.js
@@ -32,14 +14,12 @@ tasks:
 
   android-run:
     deps:
-      - plugin-update
       - elm-build
     cmds:
       - cordova run android
 
   android-build:
     deps:
-      - plugin-update
       - elm-build
     cmds:
       - cordova build android
